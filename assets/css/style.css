@@ -58,6 +58,7 @@ a {
 
 .container {
     width: 55%;
+    overflow: hidden;
     margin-left: 5em;
     display: grid;
     grid-template-columns: repeat(12, 8.33%);
@@ -88,7 +89,7 @@ a {
     margin-bottom: 90px;
 }
 
-img {
+.imageBox > img {
     width: 200px;
     float: left;
     padding-top: 0.5em;
@@ -134,6 +135,75 @@ button {
     width: 100px;
     height: 40px;
     font-size: 1.0em;
+}
+
+.portfolio-items {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 30.33%);
+    grid-row-gap: 1em;
+    background-color: #ffffff;
+}
+
+.image-1, .image-2, .image-3, .image-4, .image-5 {
+    align-self: stretch;
+    justify-self: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.image-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.image-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.image-3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.image-4 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.image-5 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.img-portfolio {
+    width: 250px;
+    height: 200px;
+}
+
+.portfolioLink { 
+    position: absolute;
+    width: 250px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    left: 0;
+    top: 67%;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 0px;
+}
+
+a.portfolioLink:hover {
+    background-color: #2e706d;
 }
 
 footer {
@@ -189,4 +259,42 @@ footer {
         padding: 50px;
     }
 
+    .portfolio-items {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 20%);
+    }
+
+    .image-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .image-2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .image-3 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .image-4 {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    .image-5 {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+
+    .img-portfolio {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .portfolioLink { 
+        width: 300px;
+    }
 }
